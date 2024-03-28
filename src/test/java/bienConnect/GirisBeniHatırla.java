@@ -42,8 +42,9 @@ public class GirisBeniHatırla extends ReusableMethods {
         WebElement beniHatirla = driver.findElement(AppiumBy.className("android.widget.CheckBox"));
         beniHatirla.click();
 
-        WebElement girisYap =  driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
+        WebElement girisYap = driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
         girisYap.click();
+        Thread.sleep(3000);
         Thread.sleep(3000);
 
         //WebElement menuButton = driver.findElement(AppiumBy.className("android.widget.Button"));

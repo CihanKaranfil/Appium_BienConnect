@@ -20,6 +20,7 @@ public class GirisBeniHatırla extends ReusableMethods {
                 + File.separator + "resources"
                 + File.separator + "BienConnect.apk";
 
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "android");
         capabilities.setCapability("automationName", "uiautomator2");
@@ -30,12 +31,14 @@ public class GirisBeniHatırla extends ReusableMethods {
         AndroidDriver driver = new AndroidDriver(url, capabilities);
 
         WebElement kullaiciAdi = driver.findElement(AppiumBy.
-                xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
+                xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/" +
+                        "android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
         kullaiciAdi.click();
         kullaiciAdi.sendKeys("Uyumsoft");
 
         WebElement sifre = driver.findElement(AppiumBy.
-                xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]"));
+                xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]" +
+                        "/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]"));
         sifre.click();
         sifre.sendKeys("Uyumsoft");
 

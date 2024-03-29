@@ -57,6 +57,7 @@ public class GirisBeniHatırla extends ReusableMethods {
        // clickGesture(driver,830,2155);
 
         clickGesture(driver,350,500);
+        //??
 
 
     }

@@ -36,12 +36,14 @@ public class GirisModulü {
         kullaiciAdi.click();
         kullaiciAdi.sendKeys("Uyumsoft");
 
+
         WebElement sifre = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]"));
         sifre.click();
         sifre.sendKeys("Uyumsoft");
 
         WebElement girisYap = driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
+
         girisYap.click();
     }
 

@@ -43,7 +43,6 @@ public class GirisModulü {
         sifre.sendKeys("Uyumsoft");
 
         WebElement girisYap = driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
-
         girisYap.click();
     }
 

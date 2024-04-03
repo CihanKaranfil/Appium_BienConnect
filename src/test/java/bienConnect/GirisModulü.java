@@ -35,8 +35,6 @@ public class GirisModulü {
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
         kullaiciAdi.click();
         kullaiciAdi.sendKeys("Uyumsoft");
-
-
         WebElement sifre = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]"));
         sifre.click();

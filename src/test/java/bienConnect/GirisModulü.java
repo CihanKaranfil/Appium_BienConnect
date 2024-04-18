@@ -16,8 +16,7 @@ public class GirisModulü {
         String appUrl = System.getProperty("user.dir")
                 + File.separator + "src"
                 + File.separator + "test"
-                + File.separator + "resources"
-                + File.separator + "BienConnect.apk";
+                + File.separator + "resources" + File.separator + "BienConnect.apk";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "android");
@@ -43,7 +42,6 @@ public class GirisModulü {
         girisYap.click();
     }
 
-
     @Test
     public void test02() throws MalformedURLException {
         String appUrl = System.getProperty("user.dir")
@@ -62,7 +60,6 @@ public class GirisModulü {
 
         URL url = new URL("http://0.0.0.0:4723");
         AndroidDriver driver = new AndroidDriver(url, capabilities);
-
 
         WebElement kullaiciAdi = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));

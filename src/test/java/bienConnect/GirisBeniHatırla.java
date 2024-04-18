@@ -52,12 +52,10 @@ public class GirisBeniHatırla extends ReusableMethods {
 
         //WebElement menuButton = driver.findElement(AppiumBy.className("android.widget.Button"));
         //menuButton.click();
-
         clickGesture(driver,536,2155);
        // clickGesture(driver,830,2155);
 
         clickGesture(driver,350,500);
-        //??
 
 
     }

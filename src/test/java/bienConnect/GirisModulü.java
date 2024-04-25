@@ -16,7 +16,7 @@ public class GirisModulü {
         String appUrl = System.getProperty("user.dir")
                 + File.separator + "src"
                 + File.separator + "test"
-                + File.separator + "resources" + File.separator + "BienConnect.apk";
+                + File.separator + "resources" + File.separator + "app-release.apk";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "android");
@@ -48,7 +48,7 @@ public class GirisModulü {
                 + File.separator + "src"
                 + File.separator + "test"
                 + File.separator + "resources"
-                + File.separator + "BienConnect.apk";
+                + File.separator + "app-release.apk";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "android");
@@ -81,7 +81,7 @@ public class GirisModulü {
                 + File.separator + "src"
                 + File.separator + "test"
                 + File.separator + "resources"
-                + File.separator + "BienConnect.apk";
+                + File.separator + "app-release.apk";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "android");

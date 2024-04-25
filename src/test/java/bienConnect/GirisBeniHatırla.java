@@ -18,7 +18,7 @@ public class GirisBeniHatırla extends ReusableMethods {
                 + File.separator + "src"
                 + File.separator + "test"
                 + File.separator + "resources"
-                + File.separator + "BienConnect.apk";
+                + File.separator + "app-release.apk";
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

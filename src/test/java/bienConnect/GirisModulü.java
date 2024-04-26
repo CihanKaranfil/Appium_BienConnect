@@ -16,7 +16,8 @@ public class GirisModulü {
         String appUrl = System.getProperty("user.dir")
                 + File.separator + "src"
                 + File.separator + "test"
-                + File.separator + "resources" + File.separator + "app-release.apk";
+                + File.separator + "resources"
+                + File.separator + "app-release.apk";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "android");
@@ -24,7 +25,7 @@ public class GirisModulü {
         capabilities.setCapability("udid", "emulator-5554");
         capabilities.setCapability("app", appUrl);
         //capabilities.setCapability("appPackage", "io.appium.android.apis");
-        //capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos")
+        //capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
 
         URL url = new URL("http://0.0.0.0:4723");
         AndroidDriver driver = new AndroidDriver(url, capabilities);
@@ -107,5 +108,6 @@ public class GirisModulü {
 
         WebElement girisYap = driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
         girisYap.click();
+
     }
 }

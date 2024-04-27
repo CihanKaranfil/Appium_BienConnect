@@ -3,6 +3,8 @@ package bienConnect;
 import com.github.javafaker.Faker;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
@@ -42,25 +44,21 @@ public class FaturaOlousturma extends ReusableMethods {
 
         WebElement girisYap = driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
         girisYap.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         WebElement faturaOlustur = driver.findElement(AppiumBy.accessibilityId("Fatura Oluştur"));
         faturaOlustur.click();
         Thread.sleep(2000);
-
         //WebElement seneryoTipi = driver.findElement(AppiumBy.accessibilityId("Ticari"));
-        //seneryoTipi.click();
-
+        //seneryoTipi.click()
         clickGesture(driver, 120, 555);
         Thread.sleep(1000);
         WebElement faturaNo = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[1]"));
         faturaNo.sendKeys("CHN2024" + faker.number().digits(9));
-
         WebElement aliciBilgileri = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]"));
         aliciBilgileri.click();
         Thread.sleep(2000);
-
         WebElement vknTckn = driver.findElement(AppiumBy.
                 xpath("//android.widget.ScrollView/android.widget.EditText[1]"));
         vknTckn.click();
@@ -72,15 +70,12 @@ public class FaturaOlousturma extends ReusableMethods {
         WebElement ilkMail = driver.findElement(AppiumBy.accessibilityId("urn:mail:defaultpk@brusaseating.eu"));
         ilkMail.click();
         Thread.sleep(1000);
-
         WebElement sehirDdm = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[6]/android.widget.Button[2]"));
         sehirDdm.click();
         Thread.sleep(1000);
-
         WebElement sehirSecim = driver.findElement(AppiumBy.xpath("(//android.view.View[@content-desc=\"Ankara\"])[1]"));
         sehirSecim.click();
         Thread.sleep(1000);
-
         WebElement mahalleSecim = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[7]"));
         mahalleSecim.click();
         mahalleSecim.sendKeys("Kızılay");
@@ -95,42 +90,42 @@ public class FaturaOlousturma extends ReusableMethods {
         malHizmetSecim.click();
         Thread.sleep(2000);
 
+
+        //clickGesture(driver, 660, 970);
+        WebElement kdvOrani = driver.findElement(AppiumBy.xpath("(//android.widget.EditText[@text=\"0.0\"])[2]"));
+        kdvOrani.click();
+        kdvOrani.clear();
+        kdvOrani.sendKeys("20");
+
+        WebElement miktar = driver.findElement(AppiumBy.xpath("(//android.widget.EditText[@text=\"0.0\"])[1]"));
+        miktar.click();
+        miktar.clear();
+        miktar.sendKeys("1");
+        Thread.sleep(1000);
+
         clickGesture(driver, 200, 760);
         Thread.sleep(1000);
 
+        clickGesture(driver, 115, 1870);
+        clickGesture(driver, 370, 1700);
+        clickGesture(driver, 115, 1870);
+        clickGesture(driver, 430, 2030);
+        clickGesture(driver, 115, 2330);
+        Thread.sleep(2000);
 
 
-        ////////////////////////////////////////////////////////////////////////////////
-        WebElement malHizmet = driver.findElement(AppiumBy.
-                xpath("//android.view.View[@content-desc=\"Mal / Hizmet\"]/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
-        malHizmet.sendKeys("Araba");
-        Thread.sleep(1000);
-
-        WebElement miktar = driver.findElement(AppiumBy.xpath("(//android.widget.EditText[@text=\"0.0\"])[1]"));
-        miktar.click(); miktar.clear(); miktar.sendKeys("1");
-        Thread.sleep(1000);
-
-        WebElement kdvOrani = driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text=\"20\"]"));
-        kdvOrani.click(); kdvOrani.clear(); kdvOrani.sendKeys("20");
-
-        clickGesture(driver, 120, 2330);
-
-        WebElement birimFiyat = driver.findElement(AppiumBy.xpath("(//android.widget.EditText[@text=\"0.0\"])[2]"));
-        birimFiyat.click(); birimFiyat.clear(); birimFiyat.sendKeys("1000");
-
-        WebElement kaydet = driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Mal / Hizmet\"]/android.widget.Button"));
-        kaydet.click();
-
-
-
-
-
-
-
-
-
-
-
+        clickGesture(driver, 190, 1570);
+        clickGesture(driver, 950, 2030);
+        clickGesture(driver, 950, 2030);
+        clickGesture(driver, 950, 2030);
+        clickGesture(driver, 130, 1730);
+        clickGesture(driver, 410, 2200);
+        clickGesture(driver, 410, 2200);
+        clickGesture(driver, 410, 2200);
+        clickGesture(driver, 410, 2200);
+        //WebElement kaydet = driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Mal / Hizmet\"]/android.widget.Button"));
+        //kaydet.click();
+        clickGesture(driver, 960, 1350);
 
     }
 }

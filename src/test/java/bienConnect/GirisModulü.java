@@ -42,7 +42,6 @@ public class GirisModulü {
         WebElement girisYap = driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
         girisYap.click();
     }
-
     @Test
     public void test02() throws MalformedURLException {
         String appUrl = System.getProperty("user.dir")

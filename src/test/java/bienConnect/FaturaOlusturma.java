@@ -88,8 +88,6 @@ public class FaturaOlusturma extends ReusableMethods {
         mahalleSecim.sendKeys("Kızılay");
         Thread.sleep(1000);
 
-
-
         WebElement malHizmetMenu = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.widget.ImageView[3]"));
         malHizmetMenu.click();

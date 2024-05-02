@@ -20,7 +20,6 @@ public class GirisBeniHatırla extends ReusableMethods {
                 + File.separator + "resources"
                 + File.separator + "app-release.apk";
 
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "android");
         capabilities.setCapability("automationName", "uiautomator2");

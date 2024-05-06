@@ -69,11 +69,6 @@ public class FaturaOlusturma extends ReusableMethods {
         ilkMail.click();
         Thread.sleep(1000);
 
-        //WebElement ulkeSecimi = driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Türkiye\"]"));
-        //ulkeSecimi.click();
-        //Thread.sleep(1000);
-        //clickGesture(driver, 170, 1100);
-
         WebElement sehirSecim = driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Erzincan\"]"));
         sehirSecim.click();
         Thread.sleep(1000);
@@ -113,7 +108,6 @@ public class FaturaOlusturma extends ReusableMethods {
         clickGesture(driver, 945, 2195); //klavyeyi kapadık
 
 
-
         WebElement birimFiyat = driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text=\"0.0\"]"));
         birimFiyat.click();
         birimFiyat.clear();
@@ -129,6 +123,8 @@ public class FaturaOlusturma extends ReusableMethods {
         toplamBilgileri.click();
         Thread.sleep(1000);
 
+
+        //Klavye kullanarak birim fiyat bekirledik sonrasında gerek kalmadı
         //clickGesture(driver, 945, 2195); //klavyeyi kapadık
         //Thread.sleep(2000);
 //

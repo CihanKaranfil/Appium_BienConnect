@@ -107,7 +107,6 @@ public class FaturaOlusturma extends ReusableMethods {
         kdvOrani.sendKeys("20");
         clickGesture(driver, 945, 2195); //klavyeyi kapadık
 
-
         WebElement birimFiyat = driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text=\"0.0\"]"));
         birimFiyat.click();
         birimFiyat.clear();

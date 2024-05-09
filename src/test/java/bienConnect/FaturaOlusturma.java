@@ -41,7 +41,6 @@ public class FaturaOlusturma extends ReusableMethods {
         sifre.click();
         sifre.sendKeys("Uyumsoft");
 
-
         WebElement girisYap = driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
         girisYap.click();
         Thread.sleep(3000);

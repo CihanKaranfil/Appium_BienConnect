@@ -89,7 +89,6 @@ public class FaturaOlusturma extends ReusableMethods {
         WebElement malHizmetSecim = driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Mal / Hizmet\"]/android.view.View[1]"));
         malHizmetSecim.click();
         Thread.sleep(1000);
-
         WebElement malHizmetSecim2 = driver.findElement(AppiumBy.
                 xpath("//android.widget.ScrollView/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
         malHizmetSecim2.click();

@@ -121,32 +121,6 @@ public class FaturaOlusturma extends ReusableMethods {
         toplamBilgileri.click();
         Thread.sleep(1000);
 
-
-        //Klavye kullanarak birim fiyat bekirledik sonrasında gerek kalmadı
-        //clickGesture(driver, 945, 2195); //klavyeyi kapadık
-        //Thread.sleep(2000);
-//
-        //clickGesture(driver, 200, 1540);
-        //clickGesture(driver, 870, 1990);
-        //Thread.sleep(1000);
-        //clickGesture(driver, 870, 1990);
-        //Thread.sleep(1000);
-        //clickGesture(driver, 870, 1990);
-        //Thread.sleep(1000);
-        //clickGesture(driver, 160, 1700);
-        //Thread.sleep(1000);
-        //clickGesture(driver, 400, 2200);
-        //Thread.sleep(1000);
-        //clickGesture(driver, 400, 2200);
-        //clickGesture(driver, 930, 2190);
-        //Thread.sleep(2000);
-
-      //clickGesture(driver, 945, 2195); //klavyeyi kapadık
-
-
-      //clickGesture(driver, 960, 2095); //Faturayı kayıt ettik
-      //clickGesture(driver, 800, 2250);
-
       clickGesture(driver, 960, 2050); //Üç çizgi
       Thread.sleep(1000);
 

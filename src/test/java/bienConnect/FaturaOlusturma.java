@@ -104,16 +104,16 @@ public class FaturaOlusturma extends ReusableMethods {
         kdvOrani.click();
         kdvOrani.clear();
         kdvOrani.sendKeys("20");
-        clickGesture(driver, 945, 2195); //klavyeyi kapadık
+        clickGesture(driver, 240, 2140); //klavyeyi kapadık
 
         WebElement birimFiyat = driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text=\"0.0\"]"));
         birimFiyat.click();
         birimFiyat.clear();
         birimFiyat.sendKeys("10000");
-        clickGesture(driver, 945, 2195); //klavyeyi kapadık
+        clickGesture(driver, 240, 2140); //klavyeyi kapadık
 
         WebElement kaydetButon = driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Mal / Hizmet\"]/android.widget.Button"));
-        kaydetButon.click();
+        kaydetButon.click(); //Fatura kayıt Edildi
         Thread.sleep(1000);
 
         WebElement toplamBilgileri = driver.findElement(AppiumBy
@@ -121,11 +121,11 @@ public class FaturaOlusturma extends ReusableMethods {
         toplamBilgileri.click();
         Thread.sleep(1000);
 
-      clickGesture(driver, 960, 2050); //Üç çizgi
+      clickGesture(driver, 960, 1800); //Üç çizgi
       Thread.sleep(1000);
 
-      clickGesture(driver, 850, 1450); // gönder butonu
-      clickGesture(driver, 850, 1450); // gönder butonu
+      clickGesture(driver, 850, 1200); // gönder butonu
+      clickGesture(driver, 850, 1200); // gönder butonu
 
 
     }

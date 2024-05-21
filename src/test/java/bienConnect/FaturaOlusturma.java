@@ -49,7 +49,7 @@ public class FaturaOlusturma extends ReusableMethods {
         faturaOlustur.click();
         Thread.sleep(2000);
 
-        clickGesture(driver, 120, 555);
+        clickGesture(driver, 120, 555); //Fatura no click
         Thread.sleep(1000);
         WebElement faturaNo = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[1]"));
         faturaNo.sendKeys("TST2024" + faker.number().digits(9));
@@ -92,7 +92,7 @@ public class FaturaOlusturma extends ReusableMethods {
         WebElement malHizmetSecim2 = driver.findElement(AppiumBy.
                 xpath("//android.widget.ScrollView/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
         malHizmetSecim2.click();
-        malHizmetSecim2.sendKeys("Araba");
+        malHizmetSecim2.sendKeys("Arac");
 
         WebElement miktar = driver.findElement(AppiumBy.xpath("(//android.widget.EditText[@text=\"0.0\"])[1]"));
         miktar.click();

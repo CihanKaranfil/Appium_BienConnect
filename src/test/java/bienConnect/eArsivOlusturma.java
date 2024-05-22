@@ -70,11 +70,7 @@ public class eArsivOlusturma extends ReusableMethods {
 
         WebElement aliciSoyadi = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[4]"));
         aliciSoyadi.click();
-        aliciadi.sendKeys("Cihan");
-
-
-
-
+        aliciadi.sendKeys("xxx");
 
     }
 }

@@ -60,17 +60,80 @@ public class eArsivOlusturma extends ReusableMethods {
         WebElement vknTckn = driver.findElement(AppiumBy.
                 xpath("//android.widget.ScrollView/android.widget.EditText[1]"));
         vknTckn.click();
-        vknTckn.sendKeys("12312314455");
+        vknTckn.sendKeys("12312314455");Thread.sleep(1000);
 
         WebElement aliciadi = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[3]"));
         aliciadi.click();
-        aliciadi.sendKeys("Cihan");Thread.sleep(2000);
+        aliciadi.sendKeys("Cihan");Thread.sleep(1000);
 
         clickGesture(driver, 240, 2140); //klavyeyi kapadık
+        Thread.sleep(1000);
 
         WebElement aliciSoyadi = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[4]"));
         aliciSoyadi.click();
-        aliciadi.sendKeys("xxx");
+        aliciSoyadi.sendKeys("xxx");
+        clickGesture(driver, 240, 2140); //klavyeyi kapadık
+
+        WebElement sehirSecim = driver.findElement(AppiumBy.accessibilityId("Kahramanmaraş"));
+        sehirSecim.click();
+        Thread.sleep(1000);
+
+        WebElement sehirSecim2 = driver.findElement(AppiumBy.xpath("(//android.view.View[@content-desc=\"Ankara\"])[1]"));
+        sehirSecim2.click();
+        Thread.sleep(1000);
+
+
+       WebElement mahalleSecim = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[8]"));
+       mahalleSecim.click();
+       mahalleSecim.sendKeys("Kızılay");
+       Thread.sleep(2000);
+
+        WebElement malHizmetMenu = driver.findElement(AppiumBy.
+                xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.widget.ImageView[3]"));
+        malHizmetMenu.click();
+        Thread.sleep(1000);
+
+        WebElement malHizmetSecim = driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Mal / Hizmet\"]/android.view.View[1]"));
+        malHizmetSecim.click();
+        Thread.sleep(1000);
+        WebElement malHizmetSecim2 = driver.findElement(AppiumBy.
+                xpath("//android.widget.ScrollView/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
+        malHizmetSecim2.click();
+        malHizmetSecim2.sendKeys("Arac");
+
+        WebElement miktar = driver.findElement(AppiumBy.xpath("(//android.widget.EditText[@text=\"0.0\"])[1]"));
+        miktar.click();
+        miktar.clear();
+        miktar.sendKeys("1");
+        Thread.sleep(2000);
+
+        WebElement kdvOrani = driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text=\"0.0\"]"));
+        kdvOrani.click();
+        kdvOrani.clear();
+        kdvOrani.sendKeys("20");
+        clickGesture(driver, 240, 2140); //klavyeyi kapadık
+
+        WebElement birimFiyat = driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text=\"0.0\"]"));
+        birimFiyat.click();
+        birimFiyat.clear();
+        birimFiyat.sendKeys("10000");
+        clickGesture(driver, 240, 2140); //klavyeyi kapadık
+
+        WebElement kaydetButon = driver.findElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Mal / Hizmet\"]/android.widget.Button"));
+        kaydetButon.click(); //Fatura kayıt Edildi
+        Thread.sleep(1000);
+
+        WebElement toplamBilgileri = driver.findElement(AppiumBy
+                .xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[5]"));
+        toplamBilgileri.click();
+        Thread.sleep(1000);
+
+        clickGesture(driver, 960, 1800); //Üç çizgi
+        Thread.sleep(1000);
+
+        clickGesture(driver, 850, 1200); // gönder butonu
+        clickGesture(driver, 850, 1200); // gönder butonu
+
 
     }
 }

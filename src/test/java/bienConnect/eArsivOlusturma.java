@@ -51,7 +51,7 @@ public class eArsivOlusturma extends ReusableMethods {
 
         clickGesture(driver, 120, 555); //Fatura no click
         Thread.sleep(1000);
-        WebElement faturaNo = driver.findElement(AppiumBy.xpath("//android.widget.ScrollView/android.widget.EditText[1]"));
+        WebElement faturaNo = driver.findElement(AppiumBy.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
         faturaNo.sendKeys("TST2024" + faker.number().digits(9));
         WebElement aliciBilgileri = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]"));
@@ -124,7 +124,7 @@ public class eArsivOlusturma extends ReusableMethods {
         Thread.sleep(1000);
 
         WebElement toplamBilgileri = driver.findElement(AppiumBy
-                .xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[5]"));
+                .xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[6]"));
         toplamBilgileri.click();
         Thread.sleep(1000);
 

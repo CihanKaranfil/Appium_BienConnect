@@ -40,13 +40,18 @@ public class eFaturaOlusturma extends ReusableMethods {
         sifre.click();
         sifre.sendKeys("Uyumsoft");
 
+        WebElement beniHatirla = driver.findElement(AppiumBy.className("android.widget.CheckBox"));
+        beniHatirla.click();
+
         WebElement girisYap = driver.findElement(AppiumBy.accessibilityId("Giriş Yap"));
         girisYap.click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+
 
         WebElement faturaOlustur = driver.findElement(AppiumBy.accessibilityId("Fatura Oluştur"));
         faturaOlustur.click();
         Thread.sleep(2000);
+
 
         clickGesture(driver, 120, 555); //Fatura no click
         Thread.sleep(1000);

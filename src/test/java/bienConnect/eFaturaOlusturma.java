@@ -47,11 +47,9 @@ public class eFaturaOlusturma extends ReusableMethods {
         girisYap.click();
         Thread.sleep(2000);
 
-
         WebElement faturaOlustur = driver.findElement(AppiumBy.accessibilityId("Fatura Oluştur"));
         faturaOlustur.click();
         Thread.sleep(2000);
-
 
         clickGesture(driver, 120, 555); //Fatura no click
         Thread.sleep(1000);
@@ -99,7 +97,6 @@ public class eFaturaOlusturma extends ReusableMethods {
         malHizmetSecim2.sendKeys("Arac");
 
         WebElement miktar = driver.findElement(AppiumBy.xpath("(//android.widget.EditText[@text=\"0.0\"])[1]"));
-
         miktar.click();
         miktar.clear();
         miktar.sendKeys("1");
@@ -131,7 +128,6 @@ public class eFaturaOlusturma extends ReusableMethods {
 
       clickGesture(driver, 850, 1200); // gönder butonu
       clickGesture(driver, 850, 1200); // gönder butonu
-
 
     }
 }

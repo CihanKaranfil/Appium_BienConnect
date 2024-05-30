@@ -30,6 +30,17 @@ public class eFaturaOlusturma extends ReusableMethods {
 
         URL url = new URL("http://0.0.0.0:4723");
         AndroidDriver driver = new AndroidDriver(url, capabilities);
+        WebElement ayarButton = driver.findElement(AppiumBy.
+                xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]"));
+        ayarButton.click();
+
+        WebElement canlıyaCekme = driver.findElement(AppiumBy.
+                xpath("//android.widget.Switch"));
+        canlıyaCekme.click();
+
+        WebElement geriCıkma = driver.findElement(AppiumBy.
+                xpath("//android.widget.Button"));
+        geriCıkma.click();
 
         WebElement kullaiciAdi = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));

@@ -133,7 +133,5 @@ public class eArsivOlusturma extends ReusableMethods {
 
         clickGesture(driver, 850, 1200); // gönder butonu
         clickGesture(driver, 850, 1200); // gönder butonu
-
-
     }
 }

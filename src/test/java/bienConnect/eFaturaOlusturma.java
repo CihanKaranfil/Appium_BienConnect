@@ -118,7 +118,8 @@ public class eFaturaOlusturma extends ReusableMethods {
         kdvOrani.click();
         kdvOrani.clear();
         kdvOrani.sendKeys("20");
-        clickGesture(driver, 240, 2140); //klavyeyi kapadık
+        clickGesture(driver, 240, 2140); //klavyeyi kapadık; driver.hideKeyboard(); ==>bu kodu burda kullan
+
 
         WebElement birimFiyat = driver.findElement(AppiumBy.xpath("//android.widget.EditText[@text=\"0.0\"]"));
         birimFiyat.click();

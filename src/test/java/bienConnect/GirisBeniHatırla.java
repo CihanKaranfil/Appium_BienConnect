@@ -2,6 +2,8 @@ package bienConnect;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
@@ -28,18 +30,31 @@ public class GirisBeniHatırla extends ReusableMethods {
 
         URL url = new URL("http://0.0.0.0:4723");
         AndroidDriver driver = new AndroidDriver(url, capabilities);
+        WebElement ayarButton = driver.findElement(AppiumBy.
+                xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]"));
+        ayarButton.click();
+
+        WebElement canlıyaCekme = driver.findElement(AppiumBy.
+                xpath("//android.widget.Switch"));
+        canlıyaCekme.click();
+
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+
+        //WebElement geriCıkma = driver.findElement(AppiumBy.
+        //        xpath("//android.widget.Button"));
+        //geriCıkma.click();
 
         WebElement kullaiciAdi = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/" +
                         "android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]"));
         kullaiciAdi.click();
-        kullaiciAdi.sendKeys("Uyumsoft");
+        kullaiciAdi.sendKeys("Bientest");
 
         WebElement sifre = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]" +
                         "/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]"));
         sifre.click();
-        sifre.sendKeys("Uyumsoft");
+        sifre.sendKeys("Bientest123");
 
         WebElement beniHatirla = driver.findElement(AppiumBy.className("android.widget.CheckBox"));
         beniHatirla.click();

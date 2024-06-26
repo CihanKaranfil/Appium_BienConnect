@@ -40,9 +40,6 @@ public class GirisBeniHatırla extends ReusableMethods {
 
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
 
-        //WebElement geriCıkma = driver.findElement(AppiumBy.
-        //        xpath("//android.widget.Button"));
-        //geriCıkma.click();
 
         WebElement kullaiciAdi = driver.findElement(AppiumBy.
                 xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/" +
